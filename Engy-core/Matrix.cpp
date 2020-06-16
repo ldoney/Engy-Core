@@ -91,5 +91,26 @@ namespace Engy {
 			}
 			return result;
 		}
+		Vector Matrix::ApplyMatrixToVector(const Matrix m, const Vector v)
+		{
+			return Multiply(m, VectAsMat(v)).getColumn(0);
+		}
+		void Matrix::print() const
+		{
+			for (int i = 0; i < this->m_m; i++)
+			{
+				std::cout << "|";
+				for (int j = 0; j < this->m_n; j++)
+				{
+					std::cout << this->m_rows.at(i).at(j);
+					if (j != this->m_n - 1)
+					{
+						std::cout << "\t";
+					}
+				}
+				std::cout << "|" << std::endl;
+			}
+			std::cout << std::endl << std::endl;
+		}
 	}
 }

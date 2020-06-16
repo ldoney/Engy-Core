@@ -1,10 +1,8 @@
 #pragma once
 #include <array>
 #include <vector>
-#include "Matrix.h"
 
 namespace Engy {
-	using namespace Engy::Math;
 	namespace Graphics {
 		class Vector
 		{
@@ -20,7 +18,6 @@ namespace Engy {
 				int length() const;
 				data_type get(int index) const;
 
-				void applyMatrix(Engy::Math::Matrix m);
 				void add(Vector other);
 				void set(int index, data_type value);
 				

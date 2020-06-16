@@ -15,10 +15,12 @@ namespace Engy {
 				Matrix(std::vector<std::vector<data_type>> vect) : m_m(size(vect)), m_n(size(vect.at(0))), m_rows(vect) {};
 				Matrix() = delete;
 
+				void print() const;
 				int rows() const;
 				int cols() const;
 				std::vector<data_type> getColumn(int which) const;
 
+				static Vector ApplyMatrixToVector(Matrix m, Vector vect);
 				static Matrix VectAsMat(Vector vect);
 				static Matrix VectAsBasis(Vector vect);
 				static Matrix Identity(int dim); 

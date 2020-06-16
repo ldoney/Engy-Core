@@ -6,8 +6,7 @@ namespace Engy {
 			private:
 				
 			public:
-				Vector position;
-				Vector scale;
+				Vector position, scale;
 				Transform();
 				void translate(Vector v);
 				void translate(double x, double y);

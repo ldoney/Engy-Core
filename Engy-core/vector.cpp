@@ -36,14 +36,6 @@ namespace Engy {
 		{
 			return size(m_components);
 		}
-		void Vector::applyMatrix(const Engy::Math::Matrix m)
-		{
-			Vector result = Math::MathF::applyMatrixToVector(m, Vector(m_components));
-			for (int i = 0; i < result.length(); i++)
-			{
-				m_components.at(i) = result.m_components.at(i);
-			}
-		}
 		std::vector<Vector::data_type> Vector::getComponents() {return m_components;}
 		Vector::data_type Vector::get(int index) const { return m_components.at(index); }
 		void Vector::set(int index, data_type value) { m_components.at(index) = value; }

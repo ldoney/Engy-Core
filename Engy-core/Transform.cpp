@@ -1,7 +1,7 @@
 #include "Transform.h"
 namespace Engy {
 	namespace Graphics {
-		Transform::Transform(): position(Vector(0.0,0.0)), scale(Vector(0.0,0.0))
+		Transform::Transform(): position(Vector(0.0,0.0)), scale(Vector(1.0,1.0))
 		{
 		}
 		void Transform::translate(Vector v)
